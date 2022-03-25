@@ -8,6 +8,6 @@ namespace API.Entities
     public class Testing
     {
         public Guid guid { get; set; }
-        public string name { get; set; }
+    
     }
 }
