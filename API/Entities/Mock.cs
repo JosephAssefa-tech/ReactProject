@@ -11,8 +11,7 @@ namespace API.Entities
         public string name { get; set; }
         public string itemName { get; set; }
         public Product mock { get; set; }
-        public Category category { get; set; }
-        
+        public Category category { get; set; } 
 
     }
 }
