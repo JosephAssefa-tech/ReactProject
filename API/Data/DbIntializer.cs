@@ -186,16 +186,7 @@ namespace API.Data
                     Type = "Boots",
                     QuantityInStock = 100
                 },
-                new Product
-                {
-                    Name = "Angular Purple Boots",
-                    Description = "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
-                    Price = 15000,
-                    PictureUrl = "/images/products/boot-ang2.png",
-                    Brand = "Angular",
-                    Type = "Boots",
-                    QuantityInStock = 100
-                },
+                
                 new Product
                 {
                     Name = "Angular Blue Boots",
