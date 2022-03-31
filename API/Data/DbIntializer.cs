@@ -131,17 +131,7 @@ namespace API.Data
                     Type = "Gloves",
                     QuantityInStock = 100
                 },
-                new Product
-                {
-                    Name = "Purple React Gloves",
-                    Description =
-                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 1600,
-                    PictureUrl = "/images/products/glove-react1.png",
-                    Brand = "React",
-                    Type = "Gloves",
-                    QuantityInStock = 100
-                },
+        
                 new Product
                 {
                     Name = "Green React Gloves",
@@ -164,17 +154,7 @@ namespace API.Data
                     Type = "Boots",
                     QuantityInStock = 100
                 },
-                new Product
-                {
-                    Name = "Core Red Boots",
-                    Description =
-                        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 18999,
-                    PictureUrl = "/images/products/boot-core2.png",
-                    Brand = "NetCore",
-                    Type = "Boots",
-                    QuantityInStock = 100
-                },
+            
                 new Product
                 {
                     Name = "Core Purple Boots",
