@@ -20,7 +20,7 @@ namespace API.Data
                     PictureUrl = "/images/products/sb-ang1.png",
                     Brand = "Angular",
                     Type = "Boards",
-                    QuantityInStock = 100
+                    QuantityInStock = 1000
                 },
                 new Product
                 {
@@ -80,7 +80,7 @@ namespace API.Data
                 {
                     Name = "Core Blue Hat",
                     Description =
-                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+                        "Fusce posuere, magna sed  ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
                     Price = 1000,
                     PictureUrl = "/images/products/hat-core1.png",
                     Brand = "NetCore",
