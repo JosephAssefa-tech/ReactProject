@@ -7,5 +7,6 @@ namespace API.Entities
 {
     public class Category
     {
+        public int id { get; set; }
     }
 }
