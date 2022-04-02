@@ -14,6 +14,7 @@ namespace API.Entities
         public string name { get; set; }
         public string ProductId { get; set; }
         public DateTime date { get; set; }
+        public Product products { get; set; }
         
 
     }
