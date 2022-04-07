@@ -24,6 +24,8 @@ namespace API.Entities
     {
         public Category categorys { get; set; }
         public int CategoryId { get; set; }
+        public string name { get; set; }
+        public int id { get; set; }
 
 
     }
