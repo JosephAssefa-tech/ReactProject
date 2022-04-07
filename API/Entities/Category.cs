@@ -14,7 +14,7 @@ namespace API.Entities
     {
         public int id { get; set; }
         public string name { get; set; }
- 
+        public string address { get; set; }
        
         public Product products { get; set; }
         
