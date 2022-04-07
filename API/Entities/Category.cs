@@ -20,4 +20,8 @@ namespace API.Entities
         
 
     }
+    public class SubCategory : Category
+    {
+
+    }
 }
