@@ -7,7 +7,8 @@ namespace API.Entities
 {
     public enum values
     {
-        isdeleted=1
+        isdeleted=1,
+        isactive=2
     }
     public class Category
     {
