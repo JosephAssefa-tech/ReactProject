@@ -22,6 +22,9 @@ namespace API.Entities
     }
     public class SubCategory : Category
     {
+        public Category categorys { get; set; }
+        public int CategoryId { get; set; }
+
 
     }
 }
