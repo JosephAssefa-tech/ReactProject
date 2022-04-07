@@ -7,5 +7,7 @@ namespace API.Entities
 {
     public class Cart
     {
+        public int id { get; set; }
+        public string cartName { get; set; }
     }
 }
