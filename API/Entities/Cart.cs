@@ -10,6 +10,8 @@ namespace API.Entities
         public int id { get; set; }
         public string cartName { get; set; }
         public DateTime date { get; set; }
+        public Category category { get; set; }
+        
 
     }
 }
