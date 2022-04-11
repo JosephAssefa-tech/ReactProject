@@ -15,12 +15,12 @@ namespace API.Data
                 {
                     Name = "Angular Speedster Board 2000",
                     Description =
-                        "Lorem ,  adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+                        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
                     Price = 20000,
                     PictureUrl = "/images/products/sb-ang1.png",
                     Brand = "Angular",
                     Type = "Boards",
-                    QuantityInStock = 1000
+                    QuantityInStock = 100
                 },
                 new Product
                 {
@@ -80,7 +80,7 @@ namespace API.Data
                 {
                     Name = "Core Blue Hat",
                     Description =
-                        "Fusce posuere, magna sed  ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
                     Price = 1000,
                     PictureUrl = "/images/products/hat-core1.png",
                     Brand = "NetCore",
@@ -131,7 +131,17 @@ namespace API.Data
                     Type = "Gloves",
                     QuantityInStock = 100
                 },
-        
+                new Product
+                {
+                    Name = "Purple React Gloves",
+                    Description =
+                        "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+                    Price = 1600,
+                    PictureUrl = "/images/products/glove-react1.png",
+                    Brand = "React",
+                    Type = "Gloves",
+                    QuantityInStock = 100
+                },
                 new Product
                 {
                     Name = "Green React Gloves",
@@ -154,7 +164,17 @@ namespace API.Data
                     Type = "Boots",
                     QuantityInStock = 100
                 },
-            
+                new Product
+                {
+                    Name = "Core Red Boots",
+                    Description =
+                        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
+                    Price = 18999,
+                    PictureUrl = "/images/products/boot-core2.png",
+                    Brand = "NetCore",
+                    Type = "Boots",
+                    QuantityInStock = 100
+                },
                 new Product
                 {
                     Name = "Core Purple Boots",
@@ -166,7 +186,16 @@ namespace API.Data
                     Type = "Boots",
                     QuantityInStock = 100
                 },
-                
+                new Product
+                {
+                    Name = "Angular Purple Boots",
+                    Description = "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
+                    Price = 15000,
+                    PictureUrl = "/images/products/boot-ang2.png",
+                    Brand = "Angular",
+                    Type = "Boots",
+                    QuantityInStock = 100
+                },
                 new Product
                 {
                     Name = "Angular Blue Boots",
@@ -180,6 +209,12 @@ namespace API.Data
                 },
             };
 
+            foreach (var product in products)
+            {
+                context.Products.Add(product);
+            }
+
+            context.SaveChanges();
 
         }
 
