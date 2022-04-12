@@ -11,7 +11,9 @@ const product=[
 function App() {
   return (
     <div className="App">
- <h1>hello</h1>
+ <h1>{product.map(items=>(
+   <li>{items.name} - {items.price}</li>
+ ))}</h1>
     </div>
   );
 }
