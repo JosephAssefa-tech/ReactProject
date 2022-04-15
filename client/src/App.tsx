@@ -20,11 +20,11 @@ function App() {
     
   ]);
   useEffect(()=>{
-    fetch('http://localhost:5000/api/products').then(response=>
-      response.json().
-      then(data=>{setProduct(data)})
-    )
-  })
+    fetch('https://localhost:44341/api/Products')
+    .then(response=>
+      response.json())
+    .then(data=>setProduct(data))
+  },[])
   function AddProduct()
   {
     setProduct([...product,{name:'product4',price:4}])
