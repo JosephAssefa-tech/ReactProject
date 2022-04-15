@@ -2,6 +2,7 @@ import './App.css';
 
 import React from 'react';
 import logo from './logo.svg';
+import { useState } from 'react';
 
 const product=[
   {name:'product111',price:10},
@@ -11,6 +12,17 @@ const product=[
 ]
 
 function App() {
+  const [product,setProduct]=useState([
+    {name:'product111',price:10},
+    {name:'product222',price:190},
+    {name:'product22',price:190},
+    
+  ]);
+  function AddProduct()
+  {
+    setProduct([...product,{name:'product4',price:4}])
+  }
+
   return (
     <div className="App">
  <h1>{
@@ -18,7 +30,7 @@ function App() {
    <li key={index}>{items.name} - {items.price}</li>
  ))
  }
- 
+ <button onClick={AddProduct}>Add Product</button>
  </h1>
     </div>
   );
