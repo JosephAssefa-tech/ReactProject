@@ -6,13 +6,6 @@ import { Product } from './product';
 import logo from './logo.svg';
 import { useState } from 'react';
 
-const product=[
-  {name:'product111',price:10},
-  {name:'product222',price:190},
-  {name:'product222',price:190},
-  
-]
-
 function App() {
   const [product,setProduct]=useState<Product[]>([]);
   useEffect(()=>{
