@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 
 import Catalog from '../../features/catalog/catalog';
 import { Product } from './models/product';
+import { Typography } from '@mui/material';
 import logo from './logo.svg';
 import { useState } from 'react';
 
@@ -29,10 +30,11 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <>
+      <Typography variant='h1'>Re-Store</Typography>
       <Catalog  products={product} addProduct={AddProduct}/> 
    
-    </div>
+    </>
   );
 }
 
