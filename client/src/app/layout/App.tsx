@@ -15,7 +15,7 @@ function App() {
       response.json())
     .then(data=>setProduct(data))
   },[])
-  function AddProduct(){
+  function AddProduct()  {
     setProduct(prevState => [...prevState,
       {
       id:prevState.length + 101,
@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div className="App">
-      <Catalog  products={product} addProduct={/> 
+      <Catalog  products={product} addProduct={AddProduct}/> 
    
     </div>
   );
