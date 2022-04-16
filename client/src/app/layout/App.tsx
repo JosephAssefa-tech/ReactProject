@@ -2,7 +2,8 @@ import './App.css';
 
 import React, { useEffect } from 'react';
 
-import { Product } from './product';
+import Catalog from '../../features/catalog/catalog';
+import { Product } from './models/product';
 import logo from './logo.svg';
 import { useState } from 'react';
 
@@ -29,13 +30,8 @@ function App() {
 
   return (
     <div className="App">
- <h1>{
- product.map((items,index)=>(
-   <li key={index}>{items.name} - {items.price}</li>
- ))
- }
- <button onClick={AddProduct}>Add Product</button>
- </h1>
+      <Catalog  products={product} addProduct={/> 
+   
     </div>
   );
 }
