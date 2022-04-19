@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-      <Typography variant='h1'>Re-Store</Typography>
+      <Typography variant='h1'>E-commerce</Typography>
       <Catalog  products={product} addProduct={AddProduct}/> 
    
     </>
