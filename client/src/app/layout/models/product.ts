@@ -9,5 +9,7 @@ export interface Product{
     quantityInStock?: number
 }
 export interface Catalog{
+    id:number;
+    name:string;
     
 }
