@@ -4,7 +4,7 @@ import ProductList from "./ProductList";
 
 interface Props{
   products:Product[];
-  addProduct:()=>void;
+  addProduct:()=>void;//becuase it has no return type
 } 
 export default function Catalog({products,addProduct}:Props)
 {
