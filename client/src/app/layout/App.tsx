@@ -1,10 +1,11 @@
 import './App.css';
 
+import { Container, CssBaseline, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 
 import Catalog from '../../features/catalog/catalog';
+import Header from './Header';
 import { Product } from './models/product';
-import { Typography } from '@mui/material';
 import logo from './logo.svg';
 import { useState } from 'react';
 
@@ -31,8 +32,13 @@ function App() {
 
   return (
     <>
-      <Typography variant='h1'>E-commerce</Typography>
-      <Catalog  products={product} addProduct={AddProduct}/> 
+    <CssBaseline/>
+    
+     <Header />
+     <Container>
+     <Catalog  products={product} addProduct={AddProduct}/> 
+     </Container>
+    
    
     </>
   );
