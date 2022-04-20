@@ -1,8 +1,6 @@
-import { Avatar, Button, Card, CardActions, CardContent, CardHeader, CardMedia, ListItemText, Typography } from "@mui/material";
+import { Avatar, Button, Card, CardActions, CardContent, CardHeader, CardMedia, Typography } from "@mui/material";
 
-import ListItem from "@mui/material/ListItem";
 import { Product } from "../../app/layout/models/product";
-import { bgcolor } from "@mui/system";
 
 interface Props{
     product:Product;
