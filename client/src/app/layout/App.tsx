@@ -1,12 +1,11 @@
 import './App.css';
 
-import { Container, CssBaseline, Typography } from '@mui/material';
-import React, { useEffect } from 'react';
+import { Container, CssBaseline } from '@mui/material';
 
 import Catalog from '../../features/catalog/catalog';
 import Header from './Header';
 import { Product } from './models/product';
-import logo from './logo.svg';
+import { useEffect } from 'react';
 import { useState } from 'react';
 
 function App() {
