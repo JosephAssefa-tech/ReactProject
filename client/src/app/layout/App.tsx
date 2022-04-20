@@ -22,8 +22,8 @@ function App() {
       id:prevState.length + 101,
       name:'name'+(prevState.length+1),
       price:(prevState.length*100)+100,
-      brand:'brand',
-      description:'some descritpiion added here',
+      brand:'brandd',
+      description:'some descritpiion added herefsfsfs',
       pictureUrl:'http://picsum.photos/200'
     
     }])
