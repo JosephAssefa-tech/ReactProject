@@ -31,7 +31,11 @@ function App() {
     
      <Header />
      <Container>
-
+    <Route path='/'  component={HomePage} />
+    <Route path='/catalog'  component={Catalog} />
+    <Route path='/catalog/:id'  component={ProductDetails} />
+    <Route path='/about'  component={AboutPage} />
+    <Route path='/contact'  component={ContactPage} />
      </Container>
     
    
