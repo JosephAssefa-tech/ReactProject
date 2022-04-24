@@ -9,15 +9,28 @@ import ContactPage from '../../features/contact/ContactPage';
 import Header from './Header';
 import HomePage from '../../features/home/HomePage';
 import ProductDetails from '../../features/catalog/ProductDetails';
+import { useState } from 'react';
 
 function App() {
+  const[darkMode,setDarkMode]=useState(false);
+  const platType=darkMode?'dark':'light'
+  
   const theme=createTheme(
     {
       palette:{
-        mode:'light'
+        mode:platType,
+        background:
+        {
+          default:platType==='light'?'#eaeaea':'#121212'
+      }
       }
     }
   )
+
+  function handleThemeChange()
+  {
+    setDarkMode(!darkMode)
+  }
 
 
 
@@ -25,14 +38,15 @@ function App() {
     <ThemeProvider theme={theme}>
     <CssBaseline/>
     
-     <Header />
+     <Header darkMode={darkMode} handleThemeChange={handleThemeChange}/>
      <Container>
      <Routes>
-    <Route path='/'>{HomePage}</Route>
-    <Route path='/catalog'>{Catalog}</Route>  
-    <Route path='/catalog/:id'>{ProductDetails}</Route>
-    <Route path='/about'  >{AboutPage}</Route>
-    <Route path='/contact'>{ContactPage} </Route>  
+  
+    <Route  path="/" element={<HomePage />}></Route>
+    <Route path='/catalog' element={<Catalog/>}></Route>  
+    <Route path='/catalog/:id' element={<ProductDetails/>}></Route>
+    <Route path='/about'  element={<AboutPage/>}></Route>
+    <Route path='/contact' element={<ContactPage/>}> </Route>   
     </Routes>
      </Container>
   
