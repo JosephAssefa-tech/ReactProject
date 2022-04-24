@@ -10,7 +10,7 @@ export default function Header({darkMode,handleThemeChange}:Props)
     return (
         <AppBar position="static" sx={{mb:4}}>
             <Toolbar>
-                <Typography variant="h6" >
+                <Typography variant="h3" >
                    RE-STORE
                 </Typography>
                 <Switch  checked={darkMode} onChange={handleThemeChange}/>
