@@ -1,6 +1,7 @@
 import './App.css';
 
-import { Container, CssBaseline } from '@mui/material';
+import { Container, CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+import { Route, Routes } from 'react-router-dom';
 
 import AboutPage from '../../features/about/AboutPage';
 import Catalog from '../../features/catalog/catalog';
@@ -8,14 +9,12 @@ import ContactPage from '../../features/contact/ContactPage';
 import Header from './Header';
 import HomePage from '../../features/home/HomePage';
 import ProductDetails from '../../features/catalog/ProductDetails';
-import { Route } from 'react-router-dom';
-import { createTheme } from '@mui/system';
 
 function App() {
   const theme=createTheme(
     {
       palette:{
-        mode:'dark'
+        mode:'light'
       }
     }
   )
@@ -23,20 +22,22 @@ function App() {
 
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
     <CssBaseline/>
     
      <Header />
      <Container>
-    <Route path='/'  component={HomePage} />
-    <Route path='/catalog'  component={Catalog} />
-    <Route path='/catalog/:id'  component={ProductDetails} />
-    <Route path='/about'  component={AboutPage} />
-    <Route path='/contact'  component={ContactPage} />
+     <Routes>
+    <Route path='/'>{HomePage}</Route>
+    <Route path='/catalog'>{Catalog}</Route>  
+    <Route path='/catalog/:id'>{ProductDetails}</Route>
+    <Route path='/about'  >{AboutPage}</Route>
+    <Route path='/contact'>{ContactPage} </Route>  
+    </Routes>
      </Container>
-    
+  
    
-    </>
+    </ThemeProvider>
   );
 }
 
