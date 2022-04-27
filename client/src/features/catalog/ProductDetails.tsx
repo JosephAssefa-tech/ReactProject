@@ -8,7 +8,8 @@ import { useParams } from "react-router-dom";
 
 export default function ProductDetails()
 {
-    const {id} = useParams<{id:string | undefined }>();
+    const {id} = useParams<{id:string   }>();
+ 
     const [product,setProduct]=useState<Product | null>();
     const [loading,setLoading]=useState(true);
     
@@ -16,6 +17,7 @@ export default function ProductDetails()
     
 
     useEffect(()=>{
+       
        agent.Catalog.details(parseInt(id))
         .then(response=>setProduct(response.data))
         .catch(error=>console.log(error))
@@ -23,8 +25,8 @@ export default function ProductDetails()
 
     },[id])//the id is called dependency
 
-    if(loading) return <h2>LOading</h2>
-    if(!product) return <h2>product</h2>
+    if(loading) return <h2>loading product</h2>
+    if(!product) return <h2>product not found</h2>
     return(
  <Grid container spacing={6}>
      <Grid item xs={6}>
