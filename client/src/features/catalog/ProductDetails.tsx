@@ -8,11 +8,12 @@ import { useParams } from "react-router-dom";
 
 export default function ProductDetails()
 {
-    const {id} = useParams<{id:string}>();
+    const {id} = useParams<{id:string | undefined }>();
     const [product,setProduct]=useState<Product | null>();
     const [loading,setLoading]=useState(true);
     
 
+    
 
     useEffect(()=>{
        agent.Catalog.details(parseInt(id))
