@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 
 import { Product } from "../../app/layout/models/product";
 import agent from "../../app/layout/api/agent";
-import axios from "axios";
 import { useParams } from "react-router-dom";
 
 export default function ProductDetails()
