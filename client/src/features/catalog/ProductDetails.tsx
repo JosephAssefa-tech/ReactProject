@@ -9,6 +9,7 @@ export default function ProductDetails()
 {
     const {id} = useParams<{id:string   }>();
     const[search,setSearchValue]=useState('');
+    const[filter,setFileter]=useState(Date.now);
     
  
     const [product,setProduct]=useState<Product | null>();
