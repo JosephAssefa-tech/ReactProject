@@ -9,6 +9,7 @@ export default function ProductDetails()
 {
     const {id} = useParams<{id:string   }>();
     const[search,setSearchValue]=useState('');
+    
  
     const [product,setProduct]=useState<Product | null>();
     const [loading,setLoading]=useState(true);
@@ -22,6 +23,7 @@ export default function ProductDetails()
         .then(response=>setProduct(response.data))
         .catch(error=>console.log(error))
         .finally(()=>setLoading(false))
+        
 
     },[id])//the id is called dependency
 
@@ -45,7 +47,7 @@ export default function ProductDetails()
                          <TableCell>{product.name}</TableCell>
                      </TableRow>
                      <TableRow>
-                         <TableCell>Description</TableCell>
+                         <TableCell>Description of product</TableCell>
                          <TableCell>{product.description}</TableCell>
                      </TableRow>
                      <TableRow>
