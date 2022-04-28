@@ -1,13 +1,14 @@
 import { Divider, Grid, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from "@mui/material";
+import { createSearchParams, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import { Product } from "../../app/layout/models/product";
 import agent from "../../app/layout/api/agent";
-import { useParams } from "react-router-dom";
 
 export default function ProductDetails()
 {
     const {id} = useParams<{id:string   }>();
+    const[search,setSearchValue]=useState('');
  
     const [product,setProduct]=useState<Product | null>();
     const [loading,setLoading]=useState(true);
