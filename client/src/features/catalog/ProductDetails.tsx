@@ -19,7 +19,7 @@ export default function ProductDetails()
      
        agent.Catalog.details(parseInt(idd))
         .then(response=>setProduct(response))
-        .catch(error=>console.log(error.response))
+        .catch(error=>console.log(error))
         .finally(()=>setLoading(false))
         
 
