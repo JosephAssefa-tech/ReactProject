@@ -28,8 +28,17 @@ namespace API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
-            var getSingleData= await _context.Products.FindAsync(id);
-            return getSingleData;
+
+            var getProduct = await _context.Products.FindAsync(id);
+            if (getProduct == null) return NotFound();
+            return getProduct;
+            //if(!int.TryParse(id, out int newId))
+            //{
+             //   return null;
+                //the above id parameter should be string in order to use this comment code
+           // }
+           // var getSingleData = await _context.Products.FindAsync(newId);
+           // return getSingleData;
 
         }
 
