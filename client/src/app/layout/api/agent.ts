@@ -14,10 +14,20 @@ const requests={
 
 const Catalog={
     list:()=>requests.get('products'),
-    details:(id:number)=>requests.get(`products/${id}`)
+    details:(id:number)=>requests.get(`Products/${id}`)
+    
+}
+const TestError={
+    get400Error:()=>requests.get('buggy/bad-request'),
+    get401Error:()=>requests.get('buggy/unauthorized'),
+    get404Error:()=>requests.get('buggy/not-found'),
+    get500Error:()=>requests.get('buggy/server-error'),
+    getValidationError:()=>requests.get('buggy/validation-error'),
+    
     
 }
 const agent={
-    Catalog
+    Catalog,
+    TestError
 }
 export default agent;

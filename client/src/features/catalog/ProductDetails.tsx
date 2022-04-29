@@ -1,32 +1,29 @@
 import { Divider, Grid, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from "@mui/material";
-import { createSearchParams, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 import { Product } from "../../app/layout/models/product";
 import agent from "../../app/layout/api/agent";
+import { useParams } from "react-router-dom";
 
 export default function ProductDetails()
 {
-    const {id} = useParams<{id:string   }>();
-    const[search,setSearchValue]=useState('');
-    const[filter,setFileter]=useState(Date.now);
-    
- 
-    const [product,setProduct]=useState<Product | null>();
+    const {id} = useParams<{id:string }>();
+    const idd=id || '';
+    const [product,setProduct]=useState<Product | null>(null);
     const [loading,setLoading]=useState(true);
     
 
     
 
     useEffect(()=>{
-       
-       agent.Catalog.details(parseInt(id))
-        .then(response=>setProduct(response.data))
-        .catch(error=>console.log(error))
+     
+       agent.Catalog.details(parseInt(idd))
+        .then(response=>setProduct(response))
+        .catch(error=>console.log(error.response))
         .finally(()=>setLoading(false))
         
 
-    },[id])//the id is called dependency
+    },[idd])//the id is called dependency
 
     if(loading) return <h2>loading product</h2>
     if(!product) return <h2>product not found</h2>
