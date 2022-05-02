@@ -1,6 +1,7 @@
 import { Divider, Grid, Table, TableBody, TableCell, TableContainer, TableRow, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 
+import LoadingComponent from "../../app/layout/LoadingComponent";
 import { Product } from "../../app/layout/models/product";
 import agent from "../../app/layout/api/agent";
 import { useParams } from "react-router-dom";
@@ -25,7 +26,7 @@ export default function ProductDetails()
 
     },[idd])//the id is called dependency
 
-    if(loading) return <h2>loading product</h2>
+    if(loading) return <LoadingComponent message='loading product...'/>
     if(!product) return <h2>product not found</h2>
     return(
  <Grid container spacing={6}>

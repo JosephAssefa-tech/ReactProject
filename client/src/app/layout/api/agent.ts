@@ -4,9 +4,12 @@ import { toast } from "react-toastify";
 
 axios.defaults.baseURL='https://localhost:44341/api/'
 
+const sleep=()=>new Promise(resolve=>setTimeout(resolve,1000));
+
 const responseBody=(response:AxiosResponse)=>response.data;
-axios.interceptors.response.use(response=>
+axios.interceptors.response.use(async response=>
     {
+        await sleep();
         return response;
     },(error:AxiosError)=>{
        const {data,status}=error.response!;
