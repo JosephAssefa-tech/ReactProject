@@ -26,7 +26,7 @@ export default function ProductDetails()
 
     },[idd])//the id is called dependency
 
-    if(loading) return <LoadingComponent message='loading product...'/>
+    if(loading) return <LoadingComponent message='loading product...'/>//use the word "debugger" to use breakpoint in js
     if(!product) return <h2>product not found</h2>
     return(
  <Grid container spacing={6}>
