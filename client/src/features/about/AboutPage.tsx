@@ -9,7 +9,7 @@ export default function AboutPage()
     function getValidationError()
     {
         agent.TestError.getValidationError().
-        then(()=>console.log('should not see this'))
+        then(()=>console.log('should not see this console'))
         .catch(error=>setValidationErrors(error));
     }
     
