@@ -4,7 +4,7 @@ export default function HomePage()
 {
     return(
         
-        <Typography variant='h2'>Home page
+        <Typography variant='h2'>Home 
         </Typography>
     )
 }
