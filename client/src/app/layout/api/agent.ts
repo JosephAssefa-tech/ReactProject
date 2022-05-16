@@ -67,7 +67,8 @@ const TestError={
     
 }
 const Basket={
-    get:()=>requests.get('basket')
+    get:()=>requests.get('basket'),
+    getBasketItem:()=>requests.get(`basket/${productId}`)
  
 }
 const agent={
