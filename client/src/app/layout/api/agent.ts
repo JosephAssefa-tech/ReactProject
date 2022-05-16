@@ -1,5 +1,6 @@
 import axios, { AxiosError, AxiosResponse } from "axios";
 
+import { request } from "http";
 import { toast } from "react-toastify";
 
 axios.defaults.baseURL='https://localhost:44341/api/'
@@ -65,8 +66,13 @@ const TestError={
     
     
 }
+const Basket={
+    get:()=>requests.get('basket')
+ 
+}
 const agent={
     Catalog,
-    TestError
+    TestError,
+    Basket
 }
 export default agent;
